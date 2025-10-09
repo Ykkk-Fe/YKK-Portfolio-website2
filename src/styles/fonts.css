@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Pixellari';
+    src: url('/fonts/Pixellari.woff2') format('woff2'),
+        url('/fonts/Pixellari.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VT323';
+    src: url('/fonts/VT323-Regular.woff2') format('woff2'),
+        url('/fonts/VT323-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

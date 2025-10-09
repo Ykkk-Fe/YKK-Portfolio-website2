@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ykkk device | Yao Kai</title>
+  <meta name="description" content="Xianyao Wei's portfolio - interaction design and creative coding projects.">
+  <link rel="stylesheet" href="./src/style.css" />
+
+  <link rel="icon" type="image/png" href="/media/favicon/image1/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/media/favicon/image1/favicon.svg" />
+  <link rel="shortcut icon" href="/media/favicon/image1/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/image1/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Weisdevice" />
+  <link rel="manifest" href="/media/favicon/site.webmanifest" />
+
+  <meta name="language" content="English" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/media/og-image.webp" />
+  <meta property="og:title" content="Weisdevice – Xianyao Wei Portfolio">
+  <meta property="og:description" content="Interaction design and creative coding projects by Xianyao Wei.">  
+</head>
+
+<body>
+  <div class="loading-screen-container">
+    <div id="loading-screen">
+
+      <div class="modal ">
+        <div class="titlebar">
+          <div id="loading-text" class="modal-title"></div>
+        </div>
+
+        <div class="filepath-bar">
+          <div class="path">C:\WINNT\SYSTEM32\Weisdevice\boot.exe</div>
+          <div class="status-indicators">
+            <span>Disk 1</span><span>Initializing</span><span>OK</span>
+          </div>
+        </div>
+
+        <div class="modal-content loading-content">
+
+          <div class="icon-fly-container">
+            <img src="/icon/open-file-folder.svg" class="icon data-icon" alt="open-file-folder icon"/>
+            <img src="/icon/paper-plane.svg" class="icon folder-icon" alt="paper-plane icon"/>
+            <img src="/icon/globe-showing-europe-africa.svg" class="icon globe-icon" alt="globe-showing icon"/>
+          </div>
+
+          <progress id="progress-bar" value="0" max="100" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></progress>
+
+          <span id="tip-text">💡 Tip: Explore using mouse or touch.</span>
+
+          <div class="nt-buttons">
+            <button class="nt-button-mute rotate1" id="enter-button-mute" disabled>Enter (No Music)</button>
+            <button class="nt-button" id="enter-button" disabled>Enter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay"></div>
+
+  <button id="music-toggle">
+    <img id="music-icon" src="/icon/music_off_124dp_3B3935_FILL0_wght700_GRAD-25_opsz48.svg" width="24" height="24"
+      alt="music">
+  </button>
+
+  <button id="theme-toggle">
+    <img id="theme-icon" src="/icon/light_mode_124dp_3B3935_FILL0_wght700_GRAD200_opsz48.svg" width="24" height="24"
+      alt="theme-mode">
+  </button>
+
+  <button id="camera-toggle">
+    <img id="camera-icon" src="/icon/chevron_right_124dp_3B3935_FILL0_wght700_GRAD200_opsz48.svg" width="24" height="24"
+      alt="theme-mode">
+  </button>
+
+  <section class="work modal hidden">
+
+    <div class="titlebar">
+      <h1 class="modal-title">Work</h1>
+      <button class="modal-exit-button" aria-label="Close">&times;</button>
+    </div>
+    <div class="filepath-bar">
+      <span class="path">C:\WINNT\SYSTEM32\Weisdevice\Work</span>
+      <div class="status-indicators">
+        <span>View: Thumbnails</span>
+        <span>Size: Auto</span>
+        <span>Read-only</span>
+      </div>
+    </div>
+
+    <div class="modal-content image-list">
+      <div class="image-list-inner">
+        <div class="image-item">
+          <div class="infobar">
+            <img src="/images/interphysis-thumbnail.webp" alt="interphysis-thumbnail">
+            <div class="infobar-content">
+              <div class="title">ECO FUTURE</div>
+              <span class="keyword">With the theme of 'Earth', the aim is to convey information about protecting the Earth's environment through visual effects and written slogans. </span>
+              <span class="year">2023</span>
+            </div>
+            <a class="more-button" data-project="interphysis">More</a>
+          </div>
+        </div>
+
+        <div class="image-item">
+          <div class="infobar">
+            <img src="/images/anglerfish-thumbnail.webp" alt="anglerfish-thumbnail">
+            <div class="infobar-content">
+              <div class="title">Bibo No Aozora</div>
+              <span class="keyword">Ryuichi Sakamoto-Music For Film</span>
+              <span class="year">2023</span>
+            </div>
+            <a class="more-button" data-project="anglerfish">More</a>
+          </div>
+        </div>
+
+        <div class="image-item">
+          <div class="infobar">
+            <img src="/images/dna-thumbnail.webp" alt="dna-thumbnail">
+            <div class="infobar-content">
+              <div class="title">Web Design</div>
+              <span class="keyword">Regarding the establishment and production of websites and the creation of works</span>
+              <span class="year">2025</span>
+            </div>
+            <a class="more-button" data-project="dna">More</a>
+          </div>
+        </div>
+
+        <div class="image-item">
+          <div class="infobar">
+            <img src="/images/futurehuman-thumbnail.webp" alt="futurehuman-thumbnail">
+            <div class="infobar-content">
+              <div class="title">VRChat Immersive Art Exhibition</div>
+              <span class="keyword">The rise of self and scrolling media has blurred truth and fueled online negativity.</span>
+              <span class="year">2022</span>
+            </div>
+            <a class="more-button" data-project="futurehuman">More</a>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about modal hidden">
+    <div class="titlebar">
+      <h1 class="modal-title">About</h1>
+      <button class="modal-exit-button" aria-label="Close">&times;</button>
+    </div>
+    <div class="filepath-bar">
+      <span class="path">C:\WINNT\SYSTEM32\Weisdevice\About</span>
+      <div class="status-indicators">
+        <span>Size: Auto</span>
+        <span>Read-only</span>
+      </div>
+    </div>
+    <div class="modal-content">
+      <div class="infobar">
+        <img src="/media/favicon/image1/web-app-manifest-192x192.png" alt="Portrait of me" class="about-me-image" />
+        <div class="about-me-text">
+          <h1 class="title">About Me</h1>
+          <hr />
+          <p> My name is Yao Kai, but you can call me kiki— it’s short and simple.</p>
+          <hr>
+          <p>
+            I am currently studying undergraduate in China and preparing to pursue 
+            graduate studies abroad. I enjoy participating in practical projects and 
+            spending more time to complete and implement them.
+          </p>
+          <hr>
+          <hr>
+          <h1 class="title">Tools</h1>
+          <hr>
+          <p>
+            Right now, I’m exploring <span class="highlight rotate1">Tactile sensation</span>and application in works.
+          </p>
+          <p>
+            My creative toolkit includes:
+            <span class="highlight rotate2">TouchDesigner</span>,
+            <span class="highlight rotate3">Unity</span>,
+            <span class="highlight rotate1">Arduino</span>,
+            <span class="highlight rotate3">Unreal</span>, and
+            <span class="highlight rotate2">Blender</span>.
+          </p>
+          <hr />
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="contact modal hidden">
+    <div class="titlebar">
+      <h1 class="modal-title">Contact</h1>
+      <button class="modal-exit-button" aria-label="Close">&times;</button>
+    </div>
+    <div class="filepath-bar">
+      <span class="path">C:\WINNT\SYSTEM32\Weisdevice\Contact</span>
+      <div class="status-indicators">
+        <span>Size: Auto</span>
+        <span>Read-only</span>
+      </div>
+    </div>
+    <div class="modal-content">
+
+      <div class="infobar">
+        <div class="title">
+          Feel free to contact me :) <br> I’d be really happy to hear from you anytime!
+        </div>
+        <a class="more-button" href="mailto:xianyao.wei.de@gmail.com">Contact Me</a>
+        <div class="social-icons">
+          <a href="https://www.youtube.com/@kkkyyy-h7r" class="social-button rotate1" target="_blank"
+            rel="noopener" aria-label="LinkedIn">
+            <img src="/icon/linkedin-svgrepo-com.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://account.bilibili.com/account/home?spm_id_from=333.1007.0.0" class="social-button rotate3" target="_blank"
+            rel="noopener" aria-label="Instagram">
+            <img src="/icon/ins-svgrepo-com.svg" alt="Instagram" />
+          </a>
+          <a href="https://github.com/Ykkk-Fe" class="social-button rotate2" target="_blank" rel="noopener"
+            aria-label="Github">
+            <img src="/icon/github-square-svgrepo-com.svg" alt="Github" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="legal modal hidden">
+    <div class="titlebar">
+      <div class="modal-title">Legal</div>
+      <button class="modal-exit-button" aria-label="Close">&times;</button>
+    </div>
+    <div class="filepath-bar">
+      <span class="path">C:\WINNT\SYSTEM32\Weisdevice\Legal</span>
+      <div class="status-indicators">
+        <span>Size: Auto</span>
+        <span>Read-only</span>
+      </div>
+    </div>
+
+    <div class="modal-content">
+      <h1>Credits</h1>
+      <hr />
+      <p>Extra thanks for the inspiration: <a href="https://www.youtube.com/@andrewwoan" target="_blank"
+          rel="noopener noreferrer">Andrew Woan</a> – Sooah’s Room
+      </p>
+      <hr>
+      <p>Thanks to the talented creators on Sketchfab for their amazing assets (licensed under CC Attribution) featured
+        on this website:</p>
+      <ul>
+        <li>FuneralClown – 8-Bit DJ</li>
+        <li>Vanya Dzhus – Desert Road</li>
+        <li>Eh – 90’s Stuff</li>
+        <li>Yana Melnyk – Food Pack</li>
+      </ul>
+      <hr>
+      <p>
+        Background music: “Bit Beats 3” by
+        <a href="https://pixabay.com/users/xtremefreddy-32332307/" target="_blank" rel="noopener noreferrer">
+          XtremeFreddy 
+        </a>(from royalty-free pixabay.com).
+      </p>
+      <p>Monitor music: “Vintage Electro Pop Loop” by frankum (Attribution 4.0, Freesound.org).</p>
+      <p>Sound effects: from freesound.org.</p>
+      <hr>
+      <hr>
+      <hr>
+      <hr>
+      <h1>Privacy Policy</h1>
+      <hr>
+      <p>I take the protection of your personal data very seriously. This privacy policy explains how your data is
+        handled when you visit my website.</p>
+      <hr>
+      <p>1. Responsible Person: Yao Kai, Email: <a
+          href="mailto:xianyao.wei.de@gmail.com">1557865796@qq.com</a>. This website is a personal portfolio
+        hosted on GitHub Pages.</p>
+      <hr>
+      <p>2. Hosting: This website is hosted by GitHub Pages, a service provided by GitHub Inc., 88 Colin P. Kelly Jr.
+        Street, San Francisco, CA 94107, USA. When you visit the site, GitHub may collect standard server log data such
+        as your IP address, browser type, and access times. For more information, please see GitHub’s privacy statement:
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+          target="_blank">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>
+      </p>
+      <hr>
+      <p>3. No Cookies: This website does not use cookies or any local storage technologies.</p>
+      <hr>
+      <p>4. Contact via Email: If you contact me via an email link (mailto:), your message, email address, and any
+        included personal data will be used solely to respond to your inquiry. This information is not shared with third
+        parties.</p>
+      <hr>
+      <p>5. Third-Party Content and Links: This website includes content and links from third-party platforms: YouTube
+        (Google LLC) – Embedded videos may collect data such as your IP address and cookies, in accordance with
+        YouTube’s own policies. More info: <a href="https://policies.google.com/privacy"
+          target="_blank">https://policies.google.com/privacy</a>. Cables.gl (by undev studio) – This website includes
+        one external link (from the project DNA) that may take you to the Cables.gl platform. More info: <a
+          href="https://cables.gl/docs/docs" target="_blank">https://cables.gl/docs/docs</a>. When interacting with
+        these services or external links, it is as if you are visiting those platforms directly, and their privacy
+        policies apply.</p>
+      <hr />
+      <p>6. Your Rights: This website does not directly collect or store personal data. It does not use cookies,
+        analytics tools, or local storage. However, I use Google Search Console to monitor site performance and
+        visibility in search engines. While I do not have access to personally identifiable data, Google may collect
+        anonymized technical data (such as IP address or device type) as part of their service. For details, see
+        Google’s privacy policy: <a href="https://policies.google.com/privacy"
+          target="_blank">https://policies.google.com/privacy</a>. If you contact me via email, your message and address
+        will be used solely to respond to your inquiry. You may request deletion of any such communication by contacting
+        me directly.</p>
+      <hr />
+      <p>7. Data Security: This website uses HTTPS encryption to protect data during transmission.</p>
+      <hr />
+      <p>8. Consent: By browsing this site, you agree to the terms of this privacy policy and disclaimer.</p>
+      <hr />
+      <p>9. Updates: If this privacy policy is revised in the future, any changes will be clearly noted on this page.
+      </p>
+      <hr>
+      <p> Last updated: June 4, 2025.</p>
+    </div>
+  </section>
+
+  <!-- Fullscreen Project Viewer -->
+  <div id="project-viewer" class="project-viewer hidden">
+    <div class="project-titlebar">
+      <h1 class="project-title">Project</h1>
+      <button class="project-close" aria-label="Close">&times;</button>
+    </div>
+
+    <div class="filepath-bar">
+      <span class="path">C:\WINNT\SYSTEM32\Weisdevice\Work\ECO FUTURE</span>
+      <div class="status-indicators">
+        <span>View: Projects</span>
+        <span>Size: Auto</span>
+        <span>Read-only</span>
+      </div>
+    </div>
+
+    <div id="project-content" class="modal-content"></div>
+  </div>
+
+  <!-- Project Templates -->
+  <template id="project-interphysis">
+    <article class="project-body">
+      <main>
+        <div class="iframe-wrapper">
+          <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/nEnUnk-5OWE?rel=0"
+            title="Interphysis project video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <p class="project-tag">"Cinema4D, Photoshop, illustration,TouchDesigner."</p>
+
+        <div class="description">
+          <p>With the theme of 'Earth', the aim is to convey information about protecting the Earth's environment through 
+            visual effects and written slogans. The animation is produced using Cinema4D, combining modern design elements 
+            and environmental concepts to present a futuristic and visually impactful work.</p>
+        </div>
+
+        <div class="images">
+          <img class="cube-image" src="/images/interphysis_prototyping.webp" alt="interphysis_prototyping.webp">
+        </div>
+
+        <div class="description">
+          <p>Each letter adopts a smoother and more complete design style, symbolizing fluidity and nature. 
+            Smooth lines not only enhance visual aesthetics, but also convey the harmony and coherence of nature.
+          </p>
+        </div>
+
+        <div class="images">
+          <img src="/images/interphysis_project_image1.webp" alt="interphysis_project_image1.webp">
+
+                  </div>
+
+                <div class="description">
+          <p>Relative work.</p>
+          
+          <iframe width="400" height="550" 
+            src="https://www.youtube.com/embed/dbxIgaF792g"
+            title="Interphysis project video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+        </div>
+      </main>
+
+      <footer>
+        <div class="credits">
+          <p>The letters are made of laser like material, giving them the luster and texture of future technology. 
+            The selection of this material enhances the modernity and technological sense of the entire animation, 
+            while also symbolizing the important role of technology in environmental protection.</p>
+        </div>
+        <p style="text-align:center; margin-top: 1rem;">&copy; 2025 Yao Kai</p>
+      </footer>
+    </article>
+  </template>
+
+  <template id="project-anglerfish">
+    <article class="project-body">
+      <main>
+        <div class="iframe-wrapper">
+          <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/oBT65dXI_4U"
+            title="Anglerfish project video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <p class="project-tag">"TouchDesigner, Kinect camera, Stable Diffusion, point cloud, ASCII art."</p>
+
+        <div class="description">
+          <p>Choose to use gentle and powerful particle motion to express, allowing particles to follow the rhythmic 
+            rhythm of music such as drum beats and tones. The blue-green particle cloud motion is like the rhythm of 
+            vast life, seemingly disordered yet orderly. Each particle changes with the music, ultimately painting a 
+            magnificent chapter of life.</p>
+        </div>
+
+        <div class="images">
+          <img src="/images/anglerfish_project_image2.webp" alt="anglerfish_project_image2.webp">
+        </div>
+
+        <div class="description">
+          <p>The gentle motion of particles symbolizes the beginning of life and the budding of hope. The screen displays 
+            a centrally concentrated particle cloud, with particles appearing blue-green and rotating around the center, 
+            creating a peaceful and contemplative atmosphere.
+          </p>
+        </div>
+
+        <div class="images">
+
+          <img src="/images/anglerfish_project_image1.webp" alt="anglerfish_project_image1.webp">
+          <img src="/images/anglerfish_project_image3.webp" alt="anglerfish_project_image3.webp">
+        </div>
+      </main>
+
+      <footer>
+        <div class="credits">
+          <p>
+The return and stable motion of particles symbolize the continuation of life and the rebirth of hope. The screen 
+displays a constantly changing particle ring, with particles contracting inward in a spiral shape, forming a beautiful 
+dynamic pattern.
+        </div>
+        <p style="text-align:center; margin-top: 1rem;">&copy; 2025 Yao Kai</p>
+      </footer>
+    </article>
+  </template>
+
+  <template id="project-dna">
+    <article class="project-body">
+      <main>
+        <div class="iframe-wrapper">
+          <iframe style="width:100%;height:100%;border:0px;" allow="autoplay; camera; microphone" title="intercative DNA embedded patch"
+            src="https://nexmaker-fab.github.io/2024ZWU-IS-7/index.html"> </iframe>
+        </div>
+
+        <p class="project-tag">"Figma,Github,Arduino,3D Printing"</p>
+
+        <div class="description">
+          <p>
+            Design webpage layout using Figma. <br>Please try this project right on this page
+            :),
+            or you can also<a href="https://nexmaker-fab.github.io/2024ZWU-IS-7/" target="_blank" rel="noopener noreferrer">
+              open the web
+            </a>.
+          </p>
+
+      </main>
+
+      <footer>
+        <p style="text-align:center; margin-top: 1rem;">&copy; 2025 Yao Kai</p>
+      </footer>
+    </article>
+  </template>
+
+  <template id="project-futurehuman">
+    <article class="project-body">
+      <main>
+        <div class="images illustration">
+
+          <img src="/images/futurehuman_project_image1.webp" alt="futurehuman_project_image1.webp">
+          <img src="/images/futurehuman_project_image2.webp" alt="futurehuman_project_image2.webp">
+        </div>
+
+        <p class="project-tag">"Blender,Unity,Figma,VRchat."</p>
+
+        <div class="description">
+          <p>
+            “Canal New Voices: VRChat Immersive Art Exhibition” innovatively integrates virtual reality 
+            technology into the presentation of the Grand Canal’s culture. Built on the VRChat platform, 
+            the digital art gallery features designs inspired by five cities—Beijing, Linqing, Jining, 
+            Yangzhou, and Hangzhou—crafted with Open Brush to create unique immersive spaces. Visitors 
+            can “step into” the artworks, transforming from passive cultural recipients into active cultural explorers.</p>
+        </div>
+      </main>
+      <footer>
+        <p style="text-align:center; margin-top: 1rem;">&copy; 2025 Yao Kai</p>
+      </footer>
+    </article>
+  </template>
+
+  
+
+  <!-- filter & 3js canvas -->
+  <svg style="display: none;">
+    <filter id="wobble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="turbulence" />
+      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="2" />
+    </filter>
+  </svg>
+
+  <div id="experience">
+    <canvas id="experience-canvas" class="experience-canvas"></canvas>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

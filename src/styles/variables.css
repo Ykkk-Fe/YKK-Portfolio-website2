@@ -1,0 +1,55 @@
+:root {
+  --color-bg: #C5DBA7;
+  --color-accent-pink: #f8a8b5;
+  --color-accent-yellow: #f7f189;
+  --color-device-blue: #4579c2;
+  --color-rock-brown: #c49a6c;
+  --color-base-white: #FAFCF7;
+  --color-base-black: #3b3935;
+}
+
+:root[data-theme="night"] {
+  --color-bg: rgb(20, 20, 20);
+  --color-accent-pink: #4B8725;
+  --color-accent-yellow: #527326;
+  --color-device-blue: #8CCD5F;
+  --color-rock-brown: #1958be;
+  --color-base-white: #1A1A1A;
+  --color-base-black: #8CCD5F;
+}
+
+h1 {
+  font-family: 'Pixellari', sans-serif;
+  color: var(--color-base-black);
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 0.95rem;
+  color: var(--color-base-black);
+  margin: 1rem 0;
+  font-family: 'VT323', monospace;
+}
+
+p, li {
+  font-family: 'VT323', monospace;
+  font-size: 1.25rem;     
+  line-height: 1.6;
+  color: var(--color-base-black);
+}
+
+ul {
+  margin-left: 1.5rem;
+  list-style-type: square;
+  color: var(--color-device-blue);
+}
+
+hr {
+  border: none;
+  margin: 0.5rem 0;
+}
+
+a {
+  color: var(--color-device-blue);
+  text-decoration: underline;
+}

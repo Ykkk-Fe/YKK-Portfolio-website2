@@ -1,1 +1,11 @@
-# YKK-Portfolio-website2
+# Weisdevice Portfolio
+
+- HTML  
+- CSS  
+- Vanilla JavaScript  
+- three.js
+- GSAP
+- GLSL
+- howler.js
+
+![Screenshot](screenshot.webp)
